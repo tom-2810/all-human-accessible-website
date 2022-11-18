@@ -1,0 +1,301 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --default-width: 90vw;
+    --max-width: 120rem;
+    --small-size: .5rem;
+    --medium-size: 1.5rem;
+    --large-size: 2rem;
+    --xlarge-size: 4rem;
+    --xxlarge-size: 8rem;
+    --small-radius: 8px;
+    --medium-radius: 16px;
+    --large-radius: 32px;
+    --c-achtergrond: #f3f3f3;
+    --c-schaduw: 0px 0px 40px rgba(0, 0, 0, 0.025);
+    --c-schaduw-hover: 0px 0px 40px rgba(0, 0, 0, 0.075);
+    --c-huistijl-magenta: linear-gradient(123.52deg, #FF0053 0%, #CD0069 100%);
+}
+
+* {
+    scroll-margin: 23rem;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: var(--c-achtergrond);
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--large-size);
+    width: var(--default-width);
+    max-width: var(--max-width);
+    margin: 20vh 0;
+}
+
+.accent-magenta {
+    background: var(--c-huistijl-magenta);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--default-width);
+    max-width: var(--max-width);
+    background-color: white;
+}
+
+#top-nav img {
+    width: 22rem;
+}
+
+#top-nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: var(--medium-size);
+}
+
+#welkom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-height: 60rem;
+    align-items: center;
+    gap: var(--large-size);
+    margin-bottom: 40vh;
+}
+
+#introductie {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    max-width: 85%;
+}
+
+#slogan {
+    font-size: var(--xlarge-size);
+    width: 35rem;
+}
+
+#toelichting {
+    font-size: var(--large-size);
+    width: 30rem;
+}
+
+#inleiding {
+    font-size: var(--large-size);
+    width: 80%;
+}
+
+#welkom img {
+    width: 90%;
+    object-fit: contain;
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    margin-left: auto;
+    margin-bottom: 20%;
+}
+
+.knoppen {
+    display: flex;
+    gap: var(--medium-size);
+    grid-column: 1/ 3;
+    grid-row: 2/ 3;
+    margin: var(--large-size) 0;
+}
+
+.knop {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: var(--small-size) var(--large-size);
+    border-radius: var(--small-radius);
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 2rem;
+}
+
+.knop:hover {
+    transform: scale(1.01);
+    box-shadow: var(--c-schaduw-hover);
+}
+
+.primair {
+    background: var(--c-huistijl-magenta);
+}
+
+.secundair {
+    color: #FF0053;
+    border: 1px solid #FF0053;
+}
+
+#uitleg {
+    display: grid;
+    grid-template-columns: repeat(2, 45rem);
+    grid-template-rows: repeat(3,1fr);
+    gap: var(--large-size);
+}
+
+.item {
+    /* width: 100%; */
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: var(--large-radius);
+    box-shadow: var(--c-schaduw);
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: var(--large-size);
+}
+
+.item h3, .item p {
+    font-size: var(--large-size);
+}
+
+.item:hover {
+    box-shadow: var(--c-schaduw-hover);
+    transform: scale(1.005);
+}
+
+.item img {
+    /* height: 10rem; */
+    flex: 1 1 auto;
+    object-fit: contain;
+}
+
+.tekstueel-deel {
+    flex: 1 1 auto;
+}
+
+#toolgankelijk {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: span 2;
+    aspect-ratio: initial;
+}
+
+#toolgankelijk ol {
+    font-size: var(--medium-size);
+    list-style: inside;
+    list-style-type: decimal;
+}
+
+#toolgankelijk img {
+    margin: auto;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1650px) {
+    #uitleg {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #toolgankelijk img {
+        height: 25rem;
+    }
+    .item h3, .item p {
+        font-size: var(--medium-size);
+    }
+}
+
+
+@media only screen and (max-width: 1120px) {
+    #top-nav {
+        width: 90vw;
+    }
+    main {
+        justify-content: flex-start;
+        width: 90vw;
+        margin: var(--xxlarge-size) 0;
+    }
+    #welkom {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: var(--large-size);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        align-items: flex-start;
+    }
+
+    #introductie {
+        max-width: 100%;
+    }
+    
+    #welkom img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 85%;
+    margin: 0 auto;
+    }
+
+    #slogan {
+        font-size: var(--large-size);
+        width: 18rem;
+    }
+
+    #top-nav img {
+        width: 11rem;
+    }
+
+    .knoppen {
+        gap: var(--medium-size);
+    }
+
+    .knop {
+        font-size: 1.1rem;
+    }
+
+    #uitleg {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        aspect-ratio: initial;
+    }
+
+    #toolgankelijk {
+        display: flex;
+        flex-direction: column;
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    #toolgankelijk img {
+        margin: 0;
+        width: 100%;
+    }
+
+    #inleiding {
+        font-size: var(--medium-size);
+        width: 100%;
+    }
+
+    #toelichting {
+        width: 100%;
+    }
+
+}
