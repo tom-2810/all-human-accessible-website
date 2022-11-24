@@ -1,20 +1,3 @@
-:root {
-    --default-width: 90vw;
-    --max-width: 120rem;
-    --small-size: .5rem;
-    --medium-size: 1.5rem;
-    --large-size: 2rem;
-    --xlarge-size: 4rem;
-    --xxlarge-size: 8rem;
-    --small-radius: 8px;
-    --medium-radius: 16px;
-    --large-radius: 32px;
-    --c-achtergrond: #f3f3f3;
-    --c-schaduw: 0px 0px 40px rgba(0, 0, 0, 0.04);
-    --c-schaduw-hover: 0px 0px 40px rgba(0, 0, 0, 0.1);
-    --c-huistijl-magenta: linear-gradient(123.52deg, #FF0053 0%, #CD0069 100%);
-}
-
 * {
     scroll-margin: 11rem;
 }
