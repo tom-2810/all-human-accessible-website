@@ -18,18 +18,21 @@ html {
     --c-header-achtergrond: #ffffff;
     --c-schaduw: 0px 0px 40px rgba(0, 0, 0, 0.025);
     --c-schaduw-hover: 0px 0px 40px rgba(0, 0, 0, 0.075);
+    --c-tekst: #444;
     --c-huistijl-magenta: linear-gradient(123.52deg, #FF0053 0%, #CD0069 100%);
 }
 
 [data-theme="dark"] {
     --c-achtergrond: #25274e;
     --c-header-achtergrond: #000000;
+    --c-tekst: rgb(255, 255, 255);
 }
 
 * {
     scroll-margin: 23rem;
     margin: 0;
     padding: 0;
+    color: var(--c-tekst);
 }
 
 body {

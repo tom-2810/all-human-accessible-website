@@ -73,6 +73,7 @@ progress {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-left: auto;
 }
 
 .richtlijnen summary label i {
@@ -101,7 +102,6 @@ progress {
     transform: rotate(0deg);
     font-size: var(--medium-size);
     transition: .5s;
-    margin-left: auto;
 }
 
 .richtlijnen details[open] summary i.fa-caret-down {
