@@ -76,10 +76,14 @@ progress {
     margin-left: auto;
 }
 
-.richtlijnen summary label i {
+.richtlijnen summary label svg {
     position: absolute;
-    color: var(--c-achtergrond);
-    font-size: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.richtlijnen summary label svg path {
+    fill: var(--c-achtergrond);
 }
 
 .richtlijnen summary input {
@@ -97,16 +101,21 @@ progress {
     box-shadow: inset 0 0 0 20px #FF0053;
 }
 
-.richtlijnen summary i.fa-caret-down {
+.richtlijnen summary svg.arrow {
     height: fit-content;
-    transform: rotate(0deg);
+    transform: rotate(90deg);
     font-size: var(--medium-size);
-    transition: .5s;
+    transition: .2s;
 }
 
-.richtlijnen details[open] summary i.fa-caret-down {
-    transform: rotate(-180deg);
-    color: #FF0053;
+.richtlijnen details[open] summary svg.arrow {
+    transform: rotate(180deg);
+    transition: .2s;
+}
+
+.richtlijnen details[open] summary svg.arrow path{
+    fill: #FF0053;
+    transition: .2s;
 }
 
 .inleiding {
