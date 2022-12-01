@@ -22,11 +22,13 @@ progress {
     width: 100%;
     height: 100%;
     padding: 0 5rem;
-    background-color: white;
+    background-color: var(--c-header-achtergrond);
     align-items: center;
-    background-image: url(../content/images/toolboard-check.png);
+    background-image: url(../content/images/svg/toolboard-check.svg);
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position-x: 90%;
+    background-position-y: var(--medium-size);
     border-radius: var(--medium-radius);
     font-size: var(--xlarge-size);
     box-shadow: var(--c-schaduw);
@@ -51,7 +53,7 @@ progress {
     gap: 2px;
     flex-direction: column;
     border-radius: var(--medium-radius);
-    background-color: white;
+    background-color: var(--c-header-achtergrond);
     padding: var(--medium-size);
     box-shadow: var(--c-schaduw);
 }
@@ -110,6 +112,10 @@ progress {
     transition: .2s;
 }
 
+.richtlijnen details summary svg.arrow path {
+    fill: var(--c-tekst);
+}
+
 .richtlijnen details[open] summary svg.arrow {
     transform: rotate(180deg);
     transition: .2s;
@@ -121,7 +127,7 @@ progress {
 }
 
 .inleiding {
-    background-color: white;
+    background-color: var(--c-header-achtergrond);
     border-radius: var(--medium-radius);
     padding: var(--medium-size);
     box-shadow: var(--c-schaduw);
@@ -144,10 +150,10 @@ progress {
 }
 
 #side-nav ol li {
-    background-color: white;
+    background-color: var(--c-header-achtergrond);
     border-radius: var(--medium-radius);
     padding: var(--small-size) var(--medium-size);
-    transition: .5s;
+    transition: transform .5s;
     box-shadow: var(--c-schaduw);
 }
 
@@ -202,6 +208,9 @@ progress {
     #toolboard-titel {
         order: 1;
         background-position: bottom;
+        background-position-y: 12rem;
+        background-position-x: 50%;
+        background-size: 22rem;
         height: 35rem;
         font-size: var(--medium-size);
         align-items: initial;

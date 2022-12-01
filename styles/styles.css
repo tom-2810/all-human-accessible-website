@@ -20,12 +20,14 @@ html {
     --c-schaduw-hover: 0px 0px 40px rgba(0, 0, 0, 0.075);
     --c-tekst: #444;
     --c-huistijl-magenta: linear-gradient(123.52deg, #FF0053 0%, #CD0069 100%);
+    --logo: url(../content/images/svg/vervoerregio_amsterdam_logo.svg);
 }
 
 [data-theme="dark"] {
-    --c-achtergrond: #25274e;
-    --c-header-achtergrond: #000000;
-    --c-tekst: rgb(255, 255, 255);
+    --c-achtergrond: #000000;
+    --c-header-achtergrond: #1a1a1a;
+    --c-tekst: #ffffff;
+    --logo: url(../content/images/svg/vervoerregio_amsterdam_logo_darkmode.svg)
 }
 
 * {
@@ -73,10 +75,12 @@ main {
     justify-content: space-between;
     width: var(--default-width);
     max-width: var(--max-width);
+    padding: var(--small-size) 0;
     background-color: var(--c-header-achtergrond);
 }
 
 #top-nav img {
+    content: var(--logo);
     width: 22rem;
     height: auto;
 }
@@ -172,10 +176,10 @@ main {
 
 .item {
     aspect-ratio: 1/1;
-    background-color: white;
+    background-color: var(--c-header-achtergrond);
     border-radius: var(--large-radius);
     box-shadow: var(--c-schaduw);
-    transition: 1s;
+    transition: transform 1s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
