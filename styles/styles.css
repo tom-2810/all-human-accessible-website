@@ -4,8 +4,8 @@ html {
 }
 
 :root {
-    --default-width: 90vw;
-    --max-width: 120rem;
+    --default-width: 85vw;
+    --max-width: 95rem;
     --small-size: .5rem;
     --medium-size: 1.5rem;
     --large-size: 2rem;
@@ -78,6 +78,7 @@ main {
 
 #top-nav img {
     width: 22rem;
+    height: auto;
 }
 
 #top-nav ul {
@@ -94,7 +95,7 @@ main {
     max-height: 60rem;
     align-items: center;
     gap: var(--large-size);
-    margin-bottom: 40vh;
+    margin-bottom: 15vh;
 }
 
 #introductie {
@@ -120,6 +121,7 @@ main {
 
 #welkom img {
     width: 90%;
+    height: auto;
     object-fit: contain;
     grid-column: 2 / 4;
     grid-row: 1 / 3;
@@ -163,13 +165,12 @@ main {
 
 #uitleg {
     display: grid;
-    grid-template-columns: repeat(2, 45rem);
+    grid-template-columns: repeat(2, 40rem);
     grid-template-rows: repeat(3,1fr);
     gap: var(--large-size);
 }
 
 .item {
-    /* width: 100%; */
     aspect-ratio: 1/1;
     background-color: white;
     border-radius: var(--large-radius);
@@ -179,6 +180,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    gap: var(--medium-size);
     padding: var(--large-size);
 }
 
@@ -192,7 +194,8 @@ main {
 }
 
 .item img {
-    /* height: 10rem; */
+    width: 80%;
+    margin-inline: auto;
     flex: 1 1 auto;
     object-fit: contain;
 }
@@ -267,7 +270,7 @@ main {
     }
 
     #top-nav img {
-        width: 11rem;
+        width: 15rem;
     }
 
     .knoppen {
@@ -284,6 +287,11 @@ main {
 
     .item {
         aspect-ratio: initial;
+        gap: .5rem;
+    }
+
+    .item img {
+        width: 95%;
     }
 
     #toolgankelijk {

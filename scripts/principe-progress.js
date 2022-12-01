@@ -29,26 +29,26 @@ checkboxesRobuust.forEach(function (checkbox) {
 
 function changeProgression(checkbox, principe) {
     var progression = checkbox.closest('.richtlijnen').querySelectorAll('input[type=checkbox]:checked').length;
-    
-    if(principe === "waarneembaar") {
+
+    if (principe === "waarneembaar") {
         document.getElementById("waarneembaar-progressie-balk").value = progression;
         document.getElementById("waarneembaar-progressie").innerHTML = progression;
     }
 
-    if(principe === "bedienbaar") {
+    if (principe === "bedienbaar") {
         document.getElementById("bedienbaar-progressie-balk").value = progression;
         document.getElementById("bedienbaar-progressie").innerHTML = progression;
     }
 
-    if(principe === "begrijpelijk") {
+    if (principe === "begrijpelijk") {
         document.getElementById("begrijpelijk-progressie-balk").value = progression;
         document.getElementById("begrijpelijk-progressie").innerHTML = progression;
     }
 
-    if(principe === "robuust") {
+    if (principe === "robuust") {
         document.getElementById("robuust-progressie-balk").value = progression;
         document.getElementById("robuust-progressie").innerHTML = progression;
     }
-    
+
     console.log(principe, progression);
 }
