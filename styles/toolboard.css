@@ -63,6 +63,8 @@ progress {
 
 .richtlijnen summary {
     display: flex;
+    margin: calc(-1 * var(--medium-size));
+    padding: var(--medium-size);
     gap: var(--medium-size);
     align-items: center;
     cursor: pointer;
