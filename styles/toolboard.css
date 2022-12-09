@@ -63,6 +63,10 @@ progress {
     background-color: var(--c-achtergrond);
 }
 
+details::marker {
+    display: none;
+}
+
 .richtlijnen summary {
     display: flex;
     margin: calc(-1 * var(--medium-size));
@@ -78,6 +82,7 @@ progress {
     justify-content: center;
     cursor: pointer;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .richtlijnen summary label svg {
@@ -88,6 +93,7 @@ progress {
 
 .richtlijnen summary label svg path {
     fill: var(--c-achtergrond);
+    pointer-events: none;
 }
 
 .richtlijnen summary input {
