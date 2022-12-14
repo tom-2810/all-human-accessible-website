@@ -14,25 +14,53 @@
 
 <body>
     <header>
-        <nav id="top-nav">
-            <a href="https://tom-toolgankelijk.student.fdnd.nl/">
-                <img src="../content/images/svg/vervoerregio_amsterdam_logo.svg" alt="vervoerregio amsterdam logo"
-                    width="352" height="105.9">
+        <section id="navigation">
+
+            <a href="/">
+                <img id="vra-logo" src="../content/images/svg/vervoerregio_amsterdam_logo.svg"
+                    alt="vervoerregio amsterdam logo" width="352" height="105.9">
             </a>
-            <ul>
-                <li>
-                    Over ons
-                </li>
-                <li>
-                    Vragen?
-                </li>
-                <li>
-                    <label aria-label="Verander kleuren thema voor hoger contrast">
-                        <input type="checkbox" id="mode"></input>
-                    </label>
-                </li>
-            </ul>
-        </nav>
+            <nav>
+                <section id="inhoud">
+                    <h2 class="mobiel-zichtbaar">Inhoud</h2>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/html/toolboard.html">Het Toolboard</a></li>
+                    </ul>
+                </section>
+
+                <section id="contact">
+                    <h2 class="mobiel-zichtbaar">Contact</h2>
+                    <ul>
+                        <li class="desktop-zichtbaar"><a href="#">Contact</a></li>
+                        <li class="mobiel-zichtbaar"><a href="tel:020-5273700">020-5273700</a></li>
+                        <li class="mobiel-zichtbaar"><a href="mailto:info@vervoerregio.nl">info@vervoerregio.nl</a></li>
+                    </ul>
+                </section>
+
+                <section id="aanpasbaar">
+                    <h2 class="mobiel-zichtbaar">Aanpasbaar</h2>
+                    <ul>
+                        <li>
+                            Lettergrootte
+                        </li>
+                        <li>
+                            <label id="thema">
+                                Thema
+                                <label id="mode" class="switch" for="checkbox">
+                                    <input type="checkbox" id="checkbox" />
+                                    <div class="slider round"></div>
+                                </label>
+                            </label>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+
+            <img id="hamburger-icon" src="/content/images/svg/hamburger-menu.svg" alt="">
+        </section>
+
+
     </header>
     <main>
         <article id="welkom">
@@ -127,6 +155,8 @@
         </section>
     </main>
     <script src="scripts/light-dark-mode.js"></script>
+    <script src="scripts/menu.js"></script>
+
 
 </body>
 

@@ -63,34 +63,124 @@ main {
     margin: 20vh 0;
 }
 
+header #vra-logo {
+    width: 18rem;
+    height: auto;
+}
+
+header #navigation {
+    display: flex;
+    align-items: center;
+    width: var(--default-width);
+    gap: var(--medium-size);
+}
+
+header nav {
+    display: flex;
+    gap: var(--medium-size);
+    width: 100%;
+}
+
+header nav #contact {
+    margin-right: auto
+}
+
+header nav #thema {
+    display: flex;
+    align-items: center;
+    gap: var(--small-size);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    gap: var(--medium-size);
+}
+
+.mobiel-zichtbaar {
+    display: none;
+}
+
+.open {
+    transform: translateY(0);
+}
+
+#hamburger-icon {
+    margin-left: auto;
+    display: none;
+}
+
 .accent-magenta {
     background: var(--c-huistijl-magenta);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-#top-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: var(--default-width);
-    max-width: var(--max-width);
-    padding: var(--small-size) 0;
-    background-color: var(--c-header-achtergrond);
+.totale-progressie {
+    padding: 1px 16px;
+    background-color: #FF0053;
+    color: white;
+    border-radius: var(--medium-radius);
 }
 
-#top-nav img {
-    content: var(--logo);
-    width: 22rem;
-    height: auto;
-}
 
-#top-nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: var(--medium-size);
-}
+
+/* START codepen switch */
+
+.switch {
+    display: inline-block;
+    height: var(--medium-size);
+    position: relative;
+    width: var(--xlarge-size);
+  }
+  
+  .switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: var(--c-achtergrond);
+    border: 3px solid var(--c-tekst);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .3s;
+  }
+  
+  .slider:before {
+    background-color: var(--c-tekst);
+    bottom: 1px;
+    content: "";
+    height: 16px;
+    left: 2px;
+    position: absolute;
+    transition: .3s;
+    width: 16px;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--c-achtergrond);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(38.5px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* END codepen switch */
+
+
 
 #welkom {
     display: grid;
@@ -240,12 +330,9 @@ main {
 
 
 @media only screen and (max-width: 1120px) {
-    #top-nav {
-        width: 90vw;
-    }
     main {
         justify-content: flex-start;
-        width: 90vw;
+        width: 93vw;
         margin: var(--xxlarge-size) 0;
     }
     #welkom {
@@ -255,6 +342,36 @@ main {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         align-items: flex-start;
+    }
+
+    header #vra-logo {
+        width: 12rem;
+        height: auto;
+    }
+
+    header #navigation {
+        width: 93vw;
+        font-size: 14px;
+    }
+
+    header nav section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--small-size);
+    }
+
+    header nav section ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .mobiel-zichtbaar {
+        display: block;
+    }
+
+    .desktop-zichtbaar {
+        display: none;
     }
 
     #introductie {
@@ -271,10 +388,6 @@ main {
     #slogan {
         font-size: var(--large-size);
         width: 18rem;
-    }
-
-    #top-nav img {
-        width: 10rem;
     }
 
     .knoppen {
@@ -317,6 +430,35 @@ main {
 
     #toelichting {
         width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    header {
+        height: var(--xlarge-size);
+    }
+
+    nav {
+        position: absolute;
+        top: var(--xlarge-size);
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: var(--c-achtergrond);
+        padding: var(--xlarge-size) var(--medium-size) 0 var(--medium-size);
+        transform: translateY(-200%);
+        transition: .5s;
+    }
+    
+    header #vra-logo {
+        width: 16rem;
+        height: auto;
+    }
+
+    #hamburger-icon {
+        display: block;
     }
 
 }

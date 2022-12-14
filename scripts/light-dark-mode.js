@@ -1,4 +1,4 @@
-let modeSwitch = document.getElementById("mode");
+let modeSwitch = document.getElementById("mode").getElementsByTagName("input")[0];
 
 modeSwitch.addEventListener('click', function () {
     modeSwitch.checked ? 
