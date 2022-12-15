@@ -73,6 +73,8 @@ header #navigation {
     align-items: center;
     width: var(--default-width);
     gap: var(--medium-size);
+    padding: var(--medium-size) 0;
+
 }
 
 header #top-nav {
@@ -104,6 +106,11 @@ header #top-nav ul {
 
 .open {
     transform: translateY(0) !important;
+}
+
+.stop-scroll {
+    height: 100%;
+    overflow: hidden;
 }
 
 #hamburger-icon {
@@ -436,11 +443,11 @@ header #top-nav ul {
 
 @media only screen and (max-width: 700px) {
     header {
-        height: var(--xlarge-size);
+        /* height: var(--xlarge-size); */
     }
 
     #navigation {
-        background-color: white;
+        background-color: var(--c-header-achtergrond);
     }
 
     #top-nav {
@@ -450,10 +457,10 @@ header #top-nav ul {
         display: flex;
         flex-direction: column;
         height: 100vh;
-        background-color: white;
+        background-color: var(--c-header-achtergrond);
         padding: var(--xlarge-size) var(--medium-size) 0 var(--medium-size);
         transform: translateY(-200%);
-        transition: .5s;
+        transition: transform 1s;
         z-index: -1;
     }
     
