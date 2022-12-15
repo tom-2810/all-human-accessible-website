@@ -1,3 +1,3 @@
 document.querySelector("#hamburger-icon").addEventListener("click", function() {
-    document.querySelector("#navigation nav").classList.toggle("open");
+    document.querySelector("#navigation #top-nav").classList.toggle("open");
 })

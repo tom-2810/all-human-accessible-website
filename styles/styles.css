@@ -75,23 +75,23 @@ header #navigation {
     gap: var(--medium-size);
 }
 
-header nav {
+header #top-nav {
     display: flex;
     gap: var(--medium-size);
     width: 100%;
 }
 
-header nav #contact {
+header #top-nav #contact {
     margin-right: auto
 }
 
-header nav #thema {
+header #top-nav #thema {
     display: flex;
     align-items: center;
     gap: var(--small-size);
 }
 
-header nav ul {
+header #top-nav ul {
     display: flex;
     list-style: none;
     flex-direction: row;
@@ -103,7 +103,7 @@ header nav ul {
 }
 
 .open {
-    transform: translateY(0);
+    transform: translateY(0) !important;
 }
 
 #hamburger-icon {
@@ -354,13 +354,13 @@ header nav ul {
         font-size: 14px;
     }
 
-    header nav section {
+    header #top-nav section {
         display: flex;
         flex-direction: column;
         gap: var(--small-size);
     }
 
-    header nav section ul {
+    header #top-nav section ul {
         display: flex;
         flex-direction: column;
         gap: 0;
@@ -439,17 +439,22 @@ header nav ul {
         height: var(--xlarge-size);
     }
 
-    nav {
+    #navigation {
+        background-color: white;
+    }
+
+    #top-nav {
         position: absolute;
         top: var(--xlarge-size);
         left: 0;
         display: flex;
         flex-direction: column;
         height: 100vh;
-        background-color: var(--c-achtergrond);
+        background-color: white;
         padding: var(--xlarge-size) var(--medium-size) 0 var(--medium-size);
         transform: translateY(-200%);
         transition: .5s;
+        z-index: -1;
     }
     
     header #vra-logo {
