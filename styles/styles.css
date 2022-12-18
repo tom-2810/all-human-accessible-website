@@ -74,7 +74,7 @@ header #navigation {
     width: var(--default-width);
     gap: var(--medium-size);
     padding: var(--medium-size) 0;
-
+    font-size: 18px;
 }
 
 header #top-nav {
@@ -333,10 +333,13 @@ header #top-nav ul {
     .item h3, .item p {
         font-size: var(--medium-size);
     }
+    header #vra-logo {
+        width: 11rem;
+    }
 }
 
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 900px) {
     main {
         justify-content: flex-start;
         width: 93vw;
@@ -352,34 +355,22 @@ header #top-nav ul {
     }
 
     header #vra-logo {
-        width: 12rem;
+        width: 14rem;
         height: auto;
     }
 
     header #navigation {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: var(--medium-size);
         width: 93vw;
-        font-size: 14px;
+        font-size: 16px;
     }
 
-    header #top-nav section {
-        display: flex;
-        flex-direction: column;
-        gap: var(--small-size);
-    }
 
-    header #top-nav section ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
 
-    .mobiel-zichtbaar {
-        display: block;
-    }
 
-    .desktop-zichtbaar {
-        display: none;
-    }
 
     #introductie {
         max-width: 100%;
@@ -441,13 +432,33 @@ header #top-nav ul {
 
 }
 
-@media only screen and (max-width: 700px) {
-    header {
-        /* height: var(--xlarge-size); */
+@media only screen and (max-width: 550px) {
+
+    header #navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: var(--c-header-achtergrond);
     }
 
-    #navigation {
-        background-color: var(--c-header-achtergrond);
+        .mobiel-zichtbaar {
+        display: block;
+    }
+
+    .desktop-zichtbaar {
+        display: none;
+    }
+
+    header #top-nav section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--small-size);
+    }
+
+    header #top-nav section ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 
     #top-nav {
@@ -465,7 +476,7 @@ header #top-nav ul {
     }
     
     header #vra-logo {
-        width: 16rem;
+        width: 12rem;
         height: auto;
     }
 
