@@ -139,7 +139,7 @@ header #top-nav ul {
     display: inline-block;
     height: var(--medium-size);
     position: relative;
-    width: var(--xlarge-size);
+    width: 44px;
   }
   
   .switch input {
@@ -155,7 +155,7 @@ header #top-nav ul {
     position: absolute;
     right: 0;
     top: 0;
-    transition: .3s;
+    transition: .5s;
   }
   
   .slider:before {
@@ -165,7 +165,7 @@ header #top-nav ul {
     height: 16px;
     left: 2px;
     position: absolute;
-    transition: .3s;
+    transition: .5s;
     width: 16px;
   }
   
@@ -174,7 +174,7 @@ header #top-nav ul {
   }
   
   input:checked + .slider:before {
-    transform: translateX(38.5px);
+    transform: translateX(19px);
   }
   
   .slider.round {
