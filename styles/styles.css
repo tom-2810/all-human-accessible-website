@@ -3,6 +3,26 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@import url(../assets/fonts/FiraSans-Medium.ttf);
+@import url(../assets/fonts/FiraSans-Regular.ttf);
+
+@font-face {
+    font-family: "Fira Sans Medium";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Fire Sans Medium")
+    url(../assets/fonts/FiraSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Fira Sans Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Fire Sans Regular")
+    url(../assets/fonts/FiraSans-Regular.ttf) format("truetype");
+}
+
+
 :root {
     --default-width: 85vw;
     --max-width: 95rem;
@@ -27,7 +47,7 @@ html {
     --c-achtergrond: #000000;
     --c-header-achtergrond: #1a1a1a;
     --c-tekst: #ffffff;
-    --logo: url(../content/images/svg/vervoerregio_amsterdam_logo_darkmode.svg)
+    --logo: url(../content/images/svg/vervoerregio_amsterdam_logo_darkmode.svg);
 }
 
 * {
@@ -63,7 +83,12 @@ main {
     margin: 20vh 0;
 }
 
+h1 {
+    font-family: "Fira Sans", "Calibri", sans-serif;
+}
+
 header #vra-logo {
+    content: var(--logo);
     width: 18rem;
     height: auto;
 }
@@ -104,7 +129,7 @@ header #top-nav ul {
     display: flex;
     flex-direction: column;
     position: fixed;
-    right: 2vw;
+    right: .5vw;
     bottom: 6vh;
     gap: var(--small-size);
 }
@@ -112,6 +137,8 @@ header #top-nav ul {
 .secondaire-knoppen section {
     display: grid;
     align-items: center;
+    height: 2rem;
+    width: 2rem;
     padding: 1rem;
     background-image: var(--c-huistijl-magenta);
     border-radius: 50%;

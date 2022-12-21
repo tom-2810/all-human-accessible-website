@@ -1,9 +1,11 @@
 let topButton = document.getElementById("top-button");
 let shareButton = document.getElementById("share-button");
 
-window.onscroll = function() {scrollFunction()};
+showTopButton();
 
-function scrollFunction() {
+window.onscroll = function() {showTopButton()};
+
+function showTopButton() {
     document.body.scrollTop > 250 || document.documentElement.scrollTop > 250 ? topButton.style.display = "block" : topButton.style.display = "none";
 };
 
