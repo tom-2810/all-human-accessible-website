@@ -100,6 +100,39 @@ header #top-nav ul {
     gap: var(--medium-size);
 }
 
+.secondaire-knoppen {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 2vw;
+    bottom: 6vh;
+    gap: var(--small-size);
+}
+
+.secondaire-knoppen section {
+    display: grid;
+    align-items: center;
+    padding: 1rem;
+    background-image: var(--c-huistijl-magenta);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.secondaire-knoppen a {
+    height: fit-content;
+    width: auto;
+    border-radius: 50%;
+}
+
+.secondaire-knoppen #top-button {
+    display: none;
+}
+
+.secondaire-knoppen svg {
+    height: 2rem;
+    width: auto;
+}
+
 .mobiel-zichtbaar {
     display: none;
 }

@@ -4,6 +4,10 @@ var checkboxesBegrijpelijk = document.querySelectorAll("#principes #begrijpelijk
 var checkboxesRobuust = document.querySelectorAll("#principes #robuust input[type=checkbox]");
 
 // localStorage.removeItem("waarneembaarProgression");
+// localStorage.removeItem("bedienbaarProgression");
+// localStorage.removeItem("begrijpelijkProgression");
+// localStorage.removeItem("robuustProgression");
+
 
 var waarneembaarChecklistCheckboxes = [];
 var waarneembaarChecklistValues = new Array(checkboxesWaarneembaar.length);
