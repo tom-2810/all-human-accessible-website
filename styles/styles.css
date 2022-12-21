@@ -518,21 +518,53 @@ header #top-nav ul {
     header #top-nav section ul {
         display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: var(--small-size);
+        padding: 0 var(--medium-size);
     }
 
-    #top-nav {
+    header #top-nav {
         position: absolute;
         top: var(--xlarge-size);
         left: 0;
         display: flex;
+        gap: var(--large-size);
         flex-direction: column;
         height: 100vh;
         background-color: var(--c-header-achtergrond);
-        padding: var(--xlarge-size) var(--medium-size) 0 var(--medium-size);
+        font-size: var(--medium-size);
+        padding: var(--xlarge-size) 0;
         transform: translateY(-200%);
         transition: transform 1s;
         z-index: -1;
+    }
+
+    #top-nav h2 {
+        position: relative;
+        color: var(--c-tekst);
+        font-weight: lighter;
+        margin: 0 var(--medium-size);
+        font-size: 1.2rem;
+    }
+
+    #top-nav h2:before {
+        content: "";
+        position: absolute;
+        bottom: 0rem;
+        height: 1px;
+        background-color: var(--c-tekst);
+        width: 100%;
+    }
+
+    header #top-nav #contact {
+        margin: 0;
+    }
+
+    #top-nav li {
+        font-weight: 500;
+    }
+
+    #top-nav a {
+        text-decoration: none;
     }
     
     header #vra-logo {
