@@ -27,7 +27,7 @@ html {
     --small-size: .5rem;
     --medium-size: 1.2rem;
     --large-size: 1.7rem;
-    --xlarge-size: 3.9rem;
+    --xlarge-size: 3rem;
     --xxlarge-size: 8rem;
     --small-radius: 8px;
     --medium-radius: 16px;
@@ -106,7 +106,8 @@ header #top-nav a {
     text-decoration: none;
 }
 
-header #top-nav a:hover, li:hover, label:hover {
+
+header #top-nav :is(a, li, label):hover {
     cursor: pointer;
     color: #FF0053;
     text-shadow: var(--c-schaduw-hover);
@@ -133,7 +134,7 @@ header #top-nav ul {
     display: flex;
     flex-direction: column;
     position: fixed;
-    right: .5vw;
+    right: .8vw;
     bottom: 6vh;
     gap: var(--small-size);
 }
@@ -143,7 +144,7 @@ header #top-nav ul {
     align-items: center;
     height: 2rem;
     width: 2rem;
-    padding: 1rem;
+    padding: var(--small-size);
     background-image: var(--c-huistijl-magenta);
     border-radius: 50%;
     cursor: pointer;
@@ -209,13 +210,13 @@ header #top-nav ul {
     height: var(--medium-size);
     position: relative;
     width: 44px;
-  }
-  
-  .switch input {
-    display:none;
-  }
-  
-  .slider {
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
     background-color: var(--c-achtergrond);
     border: 3px solid var(--c-tekst);
     bottom: 0;
@@ -225,9 +226,9 @@ header #top-nav ul {
     right: 0;
     top: 0;
     transition: .5s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     background-color: var(--c-tekst);
     bottom: 1px;
     content: "";
@@ -236,32 +237,32 @@ header #top-nav ul {
     position: absolute;
     transition: .5s;
     width: 16px;
-  }
-  
-  input:checked + .slider {
-    background-color: var(--c-achtergrond);
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(19px);
-  }
-  
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+}
 
-  /* END codepen switch */
+input:checked+.slider {
+    background-color: var(--c-achtergrond);
+}
+
+input:checked+.slider:before {
+    transform: translateX(19px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* END codepen switch */
 
 
 
 #welkom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
     max-height: 60rem;
     align-items: center;
     gap: var(--large-size);
@@ -270,8 +271,9 @@ header #top-nav ul {
 
 #introductie {
     grid-column: 1 / 3;
-    grid-row: 1 / 2;
+    grid-row: 1 / 1;
     max-width: 85%;
+    margin-bottom: 20%;
 }
 
 #slogan {
@@ -281,7 +283,7 @@ header #top-nav ul {
 
 #toelichting {
     font-size: var(--xlarge-size);
-    width: 30rem;
+    width: 60%;
 }
 
 #inleiding {
@@ -290,11 +292,11 @@ header #top-nav ul {
 }
 
 #welkom img {
-    width: 90%;
+    width: 80%;
     height: auto;
     object-fit: contain;
     grid-column: 2 / 4;
-    grid-row: 1 / 3;
+    grid-row: 1 / 1;
     margin-left: auto;
     margin-bottom: 20%;
 }
@@ -335,8 +337,10 @@ header #top-nav ul {
 
 #uitleg {
     display: grid;
-    grid-template-columns: repeat(2, 40rem);
-    grid-template-rows: repeat(3,1fr);
+    width: 100%;
+    max-width: 60rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: var(--large-size);
 }
 
@@ -354,7 +358,8 @@ header #top-nav ul {
     padding: var(--large-size);
 }
 
-.item h3, .item p {
+.item h3,
+.item p {
     font-size: var(--large-size);
 }
 
@@ -364,7 +369,7 @@ header #top-nav ul {
 }
 
 .item img {
-    width: 80%;
+    width: 75%;
     margin-inline: auto;
     flex: 1 1 auto;
     object-fit: contain;
@@ -396,12 +401,16 @@ header #top-nav ul {
     #uitleg {
         grid-template-columns: repeat(2, 1fr);
     }
+
     #toolgankelijk img {
         height: 25rem;
     }
-    .item h3, .item p {
+
+    .item h3,
+    .item p {
         font-size: var(--medium-size);
     }
+
     header #vra-logo {
         width: 11rem;
     }
@@ -412,8 +421,13 @@ header #top-nav ul {
     main {
         justify-content: flex-start;
         width: 93vw;
-        margin: var(--xxlarge-size) 0;
+        margin: calc(var(--xxlarge-size) + var(--medium-size)) 0;
     }
+
+    #uitleg {
+        width: 100%;
+    }
+
     #welkom {
         display: flex;
         flex-direction: column-reverse;
@@ -434,18 +448,17 @@ header #top-nav ul {
         align-items: flex-start;
         gap: var(--medium-size);
         width: 93vw;
-        font-size: 16px;
     }
 
     #introductie {
         max-width: 100%;
     }
-    
+
     #welkom img {
-    grid-column: 1;
-    grid-row: 1;
-    width: 85%;
-    margin: 0 auto;
+        grid-column: 1;
+        grid-row: 1;
+        width: 70%;
+        margin: 0 auto;
     }
 
     #slogan {
@@ -458,7 +471,7 @@ header #top-nav ul {
     }
 
     .knop {
-        font-size: 1.1rem;
+        font-size: var(--medium-size);
     }
 
     #uitleg {
@@ -471,7 +484,8 @@ header #top-nav ul {
     }
 
     .item img {
-        width: 95%;
+        width: 90%;
+        height: fit-content;
     }
 
     #toolgankelijk {
@@ -499,6 +513,22 @@ header #top-nav ul {
 
 @media only screen and (max-width: 550px) {
 
+    :root {
+        --xlarge-size: 2.4rem;
+    }
+
+    main {
+        margin: var(--xxlarge-size) 0;
+    }
+
+    #toelichting {
+        width: 90%;
+    }
+
+    #introductie {
+        margin-bottom: var(--xxlarge-size);
+    }
+
     header #navigation {
         display: flex;
         flex-direction: row;
@@ -506,7 +536,7 @@ header #top-nav ul {
         background-color: var(--c-header-achtergrond);
     }
 
-        .mobiel-zichtbaar {
+    .mobiel-zichtbaar {
         display: block;
     }
 
@@ -529,7 +559,7 @@ header #top-nav ul {
 
     header #top-nav {
         position: absolute;
-        top: var(--xlarge-size);
+        top: 4rem;
         left: 0;
         display: flex;
         gap: var(--large-size);
@@ -538,17 +568,18 @@ header #top-nav ul {
         background-color: var(--c-header-achtergrond);
         font-size: var(--medium-size);
         padding: var(--xlarge-size) 0;
-        transform: translateY(-200%);
-        transition: transform 1s;
+        transform: translateY(-100%);
+        transition: transform .7s;
         z-index: -1;
     }
 
     #top-nav h2 {
+        font-family: Fira Sans Regular;
         position: relative;
         color: var(--c-tekst);
         font-weight: lighter;
         margin: 0 var(--medium-size);
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
 
     #top-nav h2:before {
@@ -566,12 +597,9 @@ header #top-nav ul {
 
     #top-nav li {
         font-weight: 500;
+        font-size: var(--large-size);
     }
 
-    #top-nav a {
-        text-decoration: none;
-    }
-    
     header #vra-logo {
         width: 12rem;
         height: auto;
