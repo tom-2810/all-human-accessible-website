@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Fira Sans Medium;
 }
 
 @import url(../assets/fonts/FiraSans-Medium.ttf);
@@ -9,17 +9,15 @@ html {
 @font-face {
     font-family: "Fira Sans Medium";
     font-style: normal;
-    font-weight: 500;
-    src: local("Fire Sans Medium")
-    url(../assets/fonts/FiraSans-Medium.ttf) format("truetype");
+    font-weight: normal;
+    src: url(../assets/fonts/FiraSans-Medium.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Fira Sans Regular";
     font-style: normal;
     font-weight: normal;
-    src: local("Fire Sans Regular")
-    url(../assets/fonts/FiraSans-Regular.ttf) format("truetype");
+    src: url(../assets/fonts/FiraSans-Regular.ttf) format("truetype");
 }
 
 
@@ -27,9 +25,9 @@ html {
     --default-width: 85vw;
     --max-width: 95rem;
     --small-size: .5rem;
-    --medium-size: 1.5rem;
-    --large-size: 2rem;
-    --xlarge-size: 4rem;
+    --medium-size: 1.2rem;
+    --large-size: 1.7rem;
+    --xlarge-size: 3.9rem;
     --xxlarge-size: 8rem;
     --small-radius: 8px;
     --medium-radius: 16px;
@@ -83,10 +81,6 @@ main {
     margin: 20vh 0;
 }
 
-h1 {
-    font-family: "Fira Sans", "Calibri", sans-serif;
-}
-
 header #vra-logo {
     content: var(--logo);
     width: 18rem;
@@ -106,6 +100,16 @@ header #top-nav {
     display: flex;
     gap: var(--medium-size);
     width: 100%;
+}
+
+header #top-nav a {
+    text-decoration: none;
+}
+
+header #top-nav a:hover, li:hover, label:hover {
+    cursor: pointer;
+    color: #FF0053;
+    text-shadow: var(--c-schaduw-hover);
 }
 
 header #top-nav #contact {
@@ -166,6 +170,11 @@ header #top-nav ul {
 
 .open {
     transform: translateY(0) !important;
+}
+
+.active {
+    color: #FF0053;
+    text-shadow: var(--c-schaduw-hover);
 }
 
 .stop-scroll {
@@ -271,7 +280,7 @@ header #top-nav ul {
 }
 
 #toelichting {
-    font-size: var(--large-size);
+    font-size: var(--xlarge-size);
     width: 30rem;
 }
 
@@ -428,10 +437,6 @@ header #top-nav ul {
         font-size: 16px;
     }
 
-
-
-
-
     #introductie {
         max-width: 100%;
     }
@@ -444,8 +449,8 @@ header #top-nav ul {
     }
 
     #slogan {
-        font-size: var(--large-size);
-        width: 18rem;
+        font-size: var(--xlarge-size);
+        width: 100%;
     }
 
     .knoppen {
