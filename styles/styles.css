@@ -109,7 +109,7 @@ header #top-nav a {
 
 header #top-nav :is(a, li, label):hover {
     cursor: pointer;
-    color: #FF0053;
+    color: #c60042;
     text-shadow: var(--c-schaduw-hover);
 }
 
@@ -174,7 +174,7 @@ header #top-nav ul {
 }
 
 .active {
-    color: #FF0053;
+    color: #c60042;
     text-shadow: var(--c-schaduw-hover);
 }
 

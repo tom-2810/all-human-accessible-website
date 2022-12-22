@@ -217,7 +217,7 @@ details::marker {
 @media only screen and (max-width: 900px) {
     main {
         display: flex;
-        margin-top: calc(var(--xxlarge-size) - var(--medium-size));
+        margin-top: calc(var(--xxlarge-size) + var(--small-size));
     }
 
     #toolboard-titel {
@@ -252,5 +252,12 @@ details::marker {
 
     .richtlijnen details h3 {
         font-size: 1.04rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    main {
+        display: flex;
+        margin-top: calc(var(--xxlarge-size) - var(--medium-size));
     }
 }
