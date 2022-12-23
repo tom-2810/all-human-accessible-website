@@ -71,6 +71,11 @@ progress {
     background-color: var(--c-achtergrond);
 }
 
+.richtlijnen details * {
+    margin: var(--small-size) 0 var(--small-size) 0;
+    list-style-position: inside;
+}
+
 details::marker {
     display: none;
 }
