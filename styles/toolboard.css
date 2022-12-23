@@ -10,7 +10,7 @@ main {
 }
 
 progress {
-    accent-color: #FF0053;
+    accent-color: var(--c-huisstijl-magenta-plain);
 }
 
 #toolboard-titel {
@@ -112,7 +112,7 @@ details::marker {
 .richtlijnen summary input {
     width: var(--large-size);
     height: var(--large-size);
-    border: 4px solid #FF0053;
+    border: 4px solid var(--c-huisstijl-magenta-plain);
     border-radius: 6px;
     appearance: none;
     -webkit-appearance: none;
@@ -121,7 +121,7 @@ details::marker {
 }
 
 .richtlijnen summary input:checked {
-    box-shadow: inset 0 0 0 20px #FF0053;
+    box-shadow: inset 0 0 0 20px var(--c-huisstijl-magenta-plain);
 }
 
 .richtlijnen summary svg.arrow {
@@ -141,7 +141,7 @@ details::marker {
 }
 
 .richtlijnen details[open] summary svg.arrow path {
-    fill: #FF0053;
+    fill: var(--c-huisstijl-magenta-plain);
     transition: .2s;
 }
 
